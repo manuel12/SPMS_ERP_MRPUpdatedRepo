@@ -1,0 +1,123 @@
+{
+  "name": "spms_erpmrp",
+  "version": "1.0.0",
+  "description": "This is a ERP/MRP app for Postgres/Express/REACT/NodeJS",
+	"engines": {
+    "npm": "6.14.8",
+    "node": "15.10.0"
+  },
+  "main": "app.js",
+  "private": "false",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+	"contributors": []
+  },
+
+
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "body-parser": "^1.18.2",
+    "bootstrap": "4.6.0",
+    "cookie-parser": "^1.4.3",
+		"cookies-js": "1.2.3",
+		"express": "4.17.1",
+    "dotenv": "8.2.0",
+    "eslint": "7.21.0",
+    "eslint-plugin-react": "7.22.0",
+    "express-session": "^1.15.6",
+    "jquery": "^3.6.0",
+    "node": "15.10.0",
+    "nodemon": "^2.0.7",
+    "popper.js": "1.16.1",
+    "postgre-sql": "1.18.0",
+    "react": "17.0.1",
+    "react-bootstrap": "1.5.2",
+    "react-dom": "17.0.1",
+		"react-router":"^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+		"react-dev-utils": "11.0.3",
+    "sequelize": "6.5.1",
+    "sequelize-cli": "^6.2.0",
+    "styled-components": "^5.2.1",
+		"axios": "^0.21.1",
+		"@auth0/auth0-react":"^1.3.0",
+		"cors": "2.8.5",
+		"webpack": "5.4.0",
+		"@babel/core": "7.13.8",
+		"babel-eslint":"^10.1.0",
+		"babel-core": "6.26.3",
+		"webpack-cli": "4.5.0",
+		"webpack-dev-server": "3.11.2",
+		"pg": "8.5.1",
+		"bcrypt": "5.0.1",
+		"pg-promise": "10.9.5",
+		"jsonwebtoken": "8.5.1",
+		"babel-preset-es2015": "6.24.1",
+		"babel-preset-react": "6.24.1",
+		"babel-preset-react-app": "9.1.2",
+		"babel-preset-env":"^1.7.0",
+		"@testing-library/jest-dom": "5.11.9",
+		"@testing-library/react": "11.2.5",
+		"@testing-library/user-event": "13.0.6",
+		"morgan": "1.10.0",
+		"helmet": "4.4.1",
+		"pg-hstore": "2.3.3",
+		"postgres": "1.0.2"
+  },
+
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "debugger": "DEBUG=*:* nodemon server.js",
+    "predeploy": "cd client && npm run build && cp -a ./build/* ../public/",
+		"heroku-postbuild": "echo Skip builds on Heroku",
+    "client": "webpack serve --mode development --devtool inline-source-map --hot",
+    "server": "nodemon src/server/index.js"
+
+  },"repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbowne1/SPMS_ERP_MRPUpdatedRepo.git"
+  },
+
+	"devDependencies": {
+	},
+  "keywords": [
+    "ERP",
+    "MRP",
+    "PostgreSQL",
+    "Express",
+    "REACT",
+    "Node",
+    "MaterialUI",
+    "Database",
+    "PERNStack"
+
+  ],
+	"eslintConfig": {
+    "extends": "react-app"
+  },
+	"browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "author": "Gregory Bowne",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/gbowne1/SPMS_ERP_MRPUpdatedRepo/issues"
+  },
+  "homepage": "https://github.com/gbowne1/SPMS_ERP_MRPUpdatedRepo#readme"
+}
