@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
-
+const cors = require("cors");
 const helmet = require("helmet");
 
 const authRoutes = require("./routes/auth.routes");
@@ -10,6 +10,7 @@ const employeeRoutes = require("./routes/employee.routes");
 const app = express();
 
 // middleware
+app.use(cors());
 app.use(helmet());
 
 // access to body property of req object
