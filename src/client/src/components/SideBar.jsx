@@ -128,7 +128,7 @@ const TreeItems = ({ menuItems }) => {
     <>
       {menuItems.map((menu, index) => (
         <>
-          {menu?.children && <Divider />}
+          {menu.children && <Divider />}
           <NavLink
             to={menu.to ? menu.to : "#"}
             // style={{
@@ -152,7 +152,7 @@ const TreeItems = ({ menuItems }) => {
                 </Box>
               }
             >
-              {menu?.children && <TreeItems menuItems={menu.children} />}
+              {menu.children && <TreeItems menuItems={menu.children} />}
             </TreeItem>
           </NavLink>
         </>
