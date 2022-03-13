@@ -2,41 +2,35 @@
 
 # Project Title
 
-This is an Enterprise Resource Planning [ERP] and Manufacturing Resource Planning [MRP] application with user interface and database good for machine shop, job shop and fabrication shop companies with less than 250 employees.  It is meant to replace those methods which use Microsoft Access and Microsoft Excel and paper forms.   
+This is an Enterprise Resource Planning [ERP] and Manufacturing Resource Planning [MRP] application with user interface and database good for machine shop, job shop and fabrication shop companies with less than 250 employees.  It is meant to replace those methods which use Microsoft Access and Microsoft Excel and paper forms.
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+## Prerequisite
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+These are the things that you need to install the software
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+'npm install'  
 
-Say what the step will be
+## Development
 
-```
-Give the example
-```
+how to get a development env running.
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+Docker container 
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+This Create React App PERN stack project uses [JEST](https://jestjs.io/)
+
+To run all the tests:
+
+"test": "react-scripts test --watchAll=false"
+
+To understand and use there are many helpful video
 
 ### Break down into end to end tests
 

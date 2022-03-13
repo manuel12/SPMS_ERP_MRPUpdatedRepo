@@ -9,7 +9,7 @@ const DarkMode = ({ onChange }) => {
 
   useEffect(() => {
     onChange(darkMode);
-  }, [darkMode]);
+  }, [darkMode, onChange]);
 
   return (
     <Grid container alignItems="center">
