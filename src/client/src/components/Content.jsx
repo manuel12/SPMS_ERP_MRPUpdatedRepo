@@ -92,7 +92,7 @@ const Content = () => {
   useEffect(() => {
     addTab(newTab);
     addTab(newTab2);
-  }, []);
+  }, [newTab, newTab2]);
 
   console.log("TABS:", tabs);
   return (

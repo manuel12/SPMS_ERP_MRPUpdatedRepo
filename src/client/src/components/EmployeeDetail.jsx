@@ -54,7 +54,7 @@ const EmployeeDetail = (props) => {
 
         setMessage(errMsg);
       });
-  }, []);
+  }, [id]);
 
   const initialValues = {
     id: employee.id,
