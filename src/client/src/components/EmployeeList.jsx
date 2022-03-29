@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import spmsAPI from "../apis/spms-erp";
 import MUIDataTable from "mui-datatables";
 import { getAll } from "../services/employee.service";
@@ -14,7 +14,7 @@ const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
   const [message, setMessage] = useState("");
 
-  let history = useHistory();
+  const Navigate = useNavigate();
 
   const muiDataTablesColumns = [
     {
@@ -29,7 +29,7 @@ const EmployeeList = () => {
           return (
             <IconButton
               onClick={() =>
-                history.push(`/employees/${employees[dataIndex].id}`)
+                Navigate.push(`/employees/${employees[dataIndex].id}`)
               }
             >
               <Edit />
@@ -51,7 +51,7 @@ const EmployeeList = () => {
   ];
 
   const onRowClickHandler = (rowData, rowMeta) =>
-    history.push(`/employees/${rowData[0]}`);
+    Navigate.push(`/employees/${rowData[0]}`);
 
   const muiDataTablesOptions = {
     filter: false,
