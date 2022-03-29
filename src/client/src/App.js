@@ -1,6 +1,6 @@
 // library imports
 import React, { useContext } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoutes";
 
 // material ui imports
@@ -24,8 +24,7 @@ function App() {
     <>
       <ThemeProvider theme={theme2()}>
         <CssBaseline />
-        <BrowserRouter>
-          <Switch>
+        
             <Route exact path="/signin" component={SignIn} />
             <ProtectedRoute path="/" user={isAuthenticated}>
               <Grid container direction="column">
@@ -42,8 +41,6 @@ function App() {
                 </Grid>
               </Grid>
             </ProtectedRoute>
-          </Switch>
-        </BrowserRouter>
       </ThemeProvider>
     </>
   );

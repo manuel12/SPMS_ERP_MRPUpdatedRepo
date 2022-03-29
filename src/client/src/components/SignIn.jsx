@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
@@ -56,7 +56,7 @@ const SignIn = () => {
     password: "",
   };
 
-  const history = useHistory();
+  const Navigation = useNavigate();
 
   return (
     <Container
@@ -93,7 +93,7 @@ const SignIn = () => {
                 AuthService.login(values.username, values.password).then(
                   () => {
                     setIsAuthenticated(true);
-                    history.push("/");
+                    Navigation.push("/");
                   },
                   (error) => {
                     const resMessage =

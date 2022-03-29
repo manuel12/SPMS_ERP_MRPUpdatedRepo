@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Switch, Route } from "react-router-dom";
+import { Routes ,Route } from "react-router-dom";
 import { useTheme } from "@material-ui/core/styles";
 
 import {
@@ -132,7 +132,6 @@ const Content = () => {
           ))}
         </TabList>
         <TabPanel value="1" className={classes.tabPanel}>
-          <Switch>
             <Route path="/employees/create">
               <EmployeeCreate />
             </Route>
@@ -143,7 +142,6 @@ const Content = () => {
             <Route path="/employees">
               <EmployeeList />
             </Route>
-          </Switch>
         </TabPanel>
       </TabContext>
     </main>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children, user, ...rest }) => {
   return (
@@ -10,7 +10,7 @@ const ProtectedRoute = ({ children, user, ...rest }) => {
           return children;
         } else {
           return (
-            <Redirect
+            <Navigate
               to={{
                 pathname: "/signin",
                 state: {
