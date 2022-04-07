@@ -67,7 +67,7 @@ const EmployeeDetail = (props) => {
       {employee.id && (
         <Formik
           initialValues={initialValues}
-          // validationSchema={validationSchema}
+            validationSchema={validationSchema}
           onSubmit={(values, { setSubmitting }) => {
             setSubmitting(true);
           }}
