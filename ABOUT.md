@@ -1,4 +1,4 @@
-# SPMS ERP MRP 
+# SPMS ERP MRP  
 
 SPMS ERP/MRP is a ERP and MRP system built to use PostgreSQL, Express, REACT and Node that is good for job shops, engineering workshops, machine shops, fabrication shops with under 250 employees.
 
