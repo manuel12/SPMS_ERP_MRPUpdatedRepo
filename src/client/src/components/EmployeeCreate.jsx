@@ -1,20 +1,42 @@
-import React, { Component } from 'react';
-import { useHistory } from 'react-router-dom'
-import logo from './logo.svg';
-import './App.css';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import AddIcon from '@material-ui/icons/Add';
-import Icon from '@material-ui/core/Icon';
-import DeleteIcon from '@material-ui/icons/Delete';
-import NavigationIcon from '@material-ui/icons/Navigation';
+import * as React from "react";
+// import React, { Component } from "react";
+import { useNavigate } from "react-router-dom";
+import logo from "./logo.svg";
+import "./App.css";
+import PropTypes from "prop-types";
 
-class EmployeeCreate extends React.Component{
+import { makeStyles } from "@mui/material/styles";
+
+// import Button from "@mui/material/Button";
+// import AddIcon from "@mui/icons-material/Add";
+// import { Icon } from "@mui/material";
+// import DeleteIcon from "@mui/icons-material/Delete";
+// import NavigationIcon from "@mui/icons-material/Navigation";
+
+import swal from "sweetalert";
+
+export const useStyles =  makeStyles(() => ({
+  appBar: {
+    borderRadius: 15,
+    margin: "30px 0",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  heading: {
+    color: "rgba(0,183,255, 1)",
+  },
+  image: {
+    marginLeft: "15px",
+  },
+}));
+
+class EmployeeCreate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      attributeValue: 'id',
+      attributeValue: "id",
       user: false,
       id: true,
       addForm: false,
@@ -82,21 +104,21 @@ class EmployeeCreate extends React.Component{
 }
 
 logout = () => {
-  sessionStorage.setItem("userToken", '');
+  sessionStorage.setItem("userToken", "");
   sessionStorage.clear();
   this.setState.clear();
   localStorage.clear();
-      window.location.href = 'http://localhost:3000';
-  };
-  this.setState({
-    redirect: true,
-    addForm: false,
-    user: false,
-    users: []
-  });
+  window.location.href = "http://localhost:3000";
 };
 
-renderLogin = () =>  {
+this.setState({
+  redirect: true,
+  addForm: false,
+  user: false,
+  users: []
+});
+
+renderLogin = () => {
   return (
     <div className="login">
       <div className="loginHeader">
@@ -111,10 +133,10 @@ renderLogin = () =>  {
         <input type="password" placeholder="Enter Your Password" onChange={this.password.bind(this)} ></input>
         <br></br>
         <button onClick={() => {
-          const email = this.state.email
-          const password = this.state.password
+          const email = this.state.email;
+          const password = this.state.password;
 
-          if (email === "domain@domain.com" && password == "domain") {
+          if (email === "domain@domain.com" && password === "domain") {
 
             swal("Login Succesful", "You Have Sucessfully Logged In", "success");
             this.setState({ user: true });
@@ -164,7 +186,7 @@ showTable = () => {
       </table>
     </div>
   );
-}
+};
 
 addEmployeeForm = () => {
 
@@ -183,16 +205,16 @@ addEmployeeForm = () => {
 
     </div>
   );
-}
+};
 
 addtext = () => {
-  var text = this.state.text
-  const obj = { text, date: new Date() }
-  console.log(obj)
-}
+  var text = this.state.text;
+  const obj = { text, date: new Date() };
+  console.log(obj);
+};
 
 render = () => {
-  const { user, addForm } = this.state
+  const { user, addForm } = this.state;
 
   return (
     <div className="App">
@@ -203,11 +225,11 @@ render = () => {
 
     </div>
   );
-}
+};
 
 onCreateEmployee = () => {
-  console.log(this.state.Id);    
-}
+  console.log(this.state.Id);
+};
 
 /*const EmployeeCreate = () => {
   return (

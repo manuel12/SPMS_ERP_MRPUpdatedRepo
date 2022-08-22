@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import spmsAPI from "../apis/spms-erp";
+// import spmsAPI from "../apis/spms-erp";
 import MUIDataTable from "mui-datatables";
 import { getAll } from "../services/employee.service";
 
 // material ui imports
-import IconButton from "@material-ui/core/IconButton";
+import { IconButton } from "@mui/material";
 
 // material ui icons
-import Edit from "@material-ui/icons/Edit";
+import { Edit } from "@mui/icons-material";
 
 const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);

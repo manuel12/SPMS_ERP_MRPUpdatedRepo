@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import spmsAPI from "../apis/spms-erp";
+// import spmsAPI from "../apis/spms-erp";
 import { getOne } from "../services/employee.service";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+// import { Typography } from "@mui/material";
+import { makeStyles } from "@mui/material/styles";
 import { Formik, Form, Field } from "formik";
 import { string, object } from "yup";
-import Alert from "@material-ui/lab/Alert";
-import { Hidden, Snackbar } from "@material-ui/core";
-import { AppContext } from "../context/AppContext";
+import Alert from "@mui/lab/Alert";
+// import { Hidden, Snackbar } from "@mui/material";
+// import { AppContext } from "../context/AppContext";
 
 const validationSchema = object({
   username: string().required("Username is required"),
@@ -67,7 +67,7 @@ const EmployeeDetail = (props) => {
       {employee.id && (
         <Formik
           initialValues={initialValues}
-            validationSchema={validationSchema}
+          validationSchema={validationSchema}
           onSubmit={(values, { setSubmitting }) => {
             setSubmitting(true);
           }}

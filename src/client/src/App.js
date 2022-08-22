@@ -4,9 +4,9 @@ import { Route } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoutes";
 
 // material ui imports
-import { ThemeProvider } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { Grid } from "@material-ui/core";
+import { ThemeProvider } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
+import { Grid } from "@mui/material";
 
 // application imports
 import theme from "./theme";
@@ -24,23 +24,23 @@ function App() {
     <>
       <ThemeProvider theme={theme2()}>
         <CssBaseline />
-        
-            <Route exact path="/signin" component={SignIn} />
-            <ProtectedRoute path="/" user={isAuthenticated}>
-              <Grid container direction="column">
-                <Grid item>
-                  <Header title="SPMS ERP" />
-                </Grid>
-                <Grid item container wrap="nowrap">
-                  <Grid item>
-                    <SideBar />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Content />
-                  </Grid>
-                </Grid>
+
+        <Route exact path="/signin" component={SignIn} />
+        <ProtectedRoute path="/" user={isAuthenticated}>
+          <Grid container direction="column">
+            <Grid item>
+              <Header title="SPMS ERP" />
+            </Grid>
+            <Grid item container wrap="nowrap">
+              <Grid item>
+                <SideBar />
               </Grid>
-            </ProtectedRoute>
+              <Grid item xs={12}>
+                <Content />
+              </Grid>
+            </Grid>
+          </Grid>
+        </ProtectedRoute>
       </ThemeProvider>
     </>
   );

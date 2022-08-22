@@ -5,18 +5,16 @@ import { library } from "../fontawesome"; // this is used! Library for fontaweso
 import { NavLink } from "react-router-dom";
 
 // material ui imports
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
-import Toolbar from "@material-ui/core/Toolbar";
-import List from "@material-ui/core/List";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import ListItem from "@material-ui/core/ListItem";
-import { ListSubheader, Box, Hidden } from "@material-ui/core";
-import { TreeView, TreeItem } from "@material-ui/lab";
+import { makeStyles, useTheme } from "@mui/material/styles";
+import Drawer from "@mui/material/Drawer";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import {Box, Hidden } from "@mui/material";
+import { TreeView, TreeItem } from "@mui/lab";
 
 // material ui icons
-import { ExpandMore, ChevronRight } from "@material-ui/icons";
+import { ExpandMore, ChevronRight } from "@mui/icons-material";
 
 // application imports
 import DarkMode from "./DarkMode.jsx";
@@ -131,10 +129,10 @@ const TreeItems = ({ menuItems }) => {
           {menu.children && <Divider />}
           <NavLink
             to={menu.to ? menu.to : "#"}
-            // style={{
-            //   textDecoration: "none",
-            //   color: theme.palette.primary.main,
-            // }}
+          // style={{
+          //   textDecoration: "none",
+          //   color: theme.palette.primary.main,
+          // }}
           >
             <TreeItem
               nodeId={menu.label}

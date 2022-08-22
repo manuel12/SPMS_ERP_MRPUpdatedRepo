@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { IconButton, Menu, MenuItem } from "@material-ui/core";
-import { AccountCircle } from "@material-ui/icons";
+import { IconButton, Menu, MenuItem } from "@mui/material";
+import { AccountCircle } from "@mui/icons-material";
 
 const UserIcon = () => {
   const [anchorAccount, setAnchorAccount] = useState(null);

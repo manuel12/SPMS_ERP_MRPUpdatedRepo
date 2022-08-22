@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 // material ui imports
-import { Grid, Switch } from "@material-ui/core";
+import { Grid, Switch } from "@mui/material";
 
 const DarkMode = ({ onChange }) => {
   const [darkMode, setDarkMode] = useState(false);

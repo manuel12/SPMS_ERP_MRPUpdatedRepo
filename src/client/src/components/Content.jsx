@@ -1,23 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Route } from "react-router-dom";
-import { useTheme } from "@material-ui/core/styles";
-
-import {
-  Typography,
-  Toolbar,
-  Tab,
-  Box,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemSecondaryAction,
-  IconButton,
-} from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import { TabPanel, TabContext, TabList } from "@material-ui/lab";
-
-import { CloseRounded } from "@material-ui/icons";
+import { useTheme } from "@mui/material/styles";
+import { Typography } from "@mui/material";
+import { Toolbar } from "@mui/material";
+import { Tabs } from "@mui/material";
+import { IconButton } from "@mui/material";
+import { TabPanel, TabContext, TabList } from "@mui/lab";
+import { CloseRounded } from "@mui/icons-material";
+import { makeStyles } from "@mui/material/styles";
 
 // application imports
 import EmployeeCreate from "./EmployeeCreate";
@@ -107,7 +98,7 @@ const Content = () => {
           indicatorColor={theme.palette.background.paper}
         >
           {tabs.map((tab, index) => (
-            <Tab
+            <Tabs
               classes={{ wrapper: classes.tabHeader }}
               icon={
                 <>
@@ -132,16 +123,16 @@ const Content = () => {
           ))}
         </TabList>
         <TabPanel value="1" className={classes.tabPanel}>
-            <Route path="/employees/create">
-              <EmployeeCreate />
-            </Route>
-            <Route path="/employees/:id">
-              <EmployeeDetail />
-            </Route>
+          <Route path="/employees/create">
+            <EmployeeCreate />
+          </Route>
+          <Route path="/employees/:id">
+            <EmployeeDetail />
+          </Route>
 
-            <Route path="/employees">
-              <EmployeeList />
-            </Route>
+          <Route path="/employees">
+            <EmployeeList />
+          </Route>
         </TabPanel>
       </TabContext>
     </main>

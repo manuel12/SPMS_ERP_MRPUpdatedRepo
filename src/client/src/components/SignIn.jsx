@@ -1,18 +1,18 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import { makeStyles } from "@mui/material/styles";
+import Container from "@mui/material/Container";
 import { Formik, Form, Field } from "formik";
 import { string, object } from "yup";
 import AuthService from "../services/auth.service";
-import Alert from "@material-ui/lab/Alert";
+import Alert from "@mui/lab/Alert";
 import logo from "../assets/spms_logo.webp";
 import mainImage from "../assets/engineering-cogs.webp";
-import { Hidden, Snackbar } from "@material-ui/core";
+import { Hidden } from "@mui/material";
 import { AppContext } from "../context/AppContext";
 
 const validationSchema = object({

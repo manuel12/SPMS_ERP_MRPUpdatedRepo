@@ -2,11 +2,11 @@
 import React from "react";
 
 // material ui imports
-import { Typography, AppBar, IconButton, Toolbar } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Typography, AppBar, IconButton, Toolbar } from "@mui/material";
+import { makeStyles } from "@mui/material/styles";
 
 // material ui icon imports
-import MenuIcon from "@material-ui/icons/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
 
 // application imports
 import UserIcon from "./UserIcon.jsx";
