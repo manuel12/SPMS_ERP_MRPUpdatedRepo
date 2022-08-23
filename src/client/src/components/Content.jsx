@@ -54,24 +54,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const newTab = {
+  icon: "users",
+  label: "Employees",
+  dataURL: "/employees",
+  ID: "1",
+};
+const newTab2 = {
+  icon: "cogs",
+  label: "Parts",
+  dataURL: "/parts",
+  ID: "2",
+};
+
 const Content = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const [tabs, setTabs] = useState([]);
+  const [tabs, setTabs] = useState([newTab, newTab2]);
   const [selectedTab, setSelectedTab] = useState("1");
-
-  const newTab = {
-    icon: "users",
-    label: "Employees",
-    dataURL: "/employees",
-    ID: "1",
-  };
-  const newTab2 = {
-    icon: "cogs",
-    label: "Parts",
-    dataURL: "/parts",
-    ID: "2",
-  };
 
   const addTab = (tab) => setTabs((tabs) => [...tabs, tab]);
 
@@ -83,7 +83,7 @@ const Content = () => {
   useEffect(() => {
     addTab(newTab);
     addTab(newTab2);
-  }, [newTab, newTab2]);
+  }, []);
 
   console.log("TABS:", tabs);
   return (
