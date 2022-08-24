@@ -1,18 +1,10 @@
 {
     "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
     "[javascriptreact]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": false,
-            "source.sortImports": false
-        }
-    },
-    "[typescript]": {
-        "editor.formatOnSave": true
-    },
-    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
             "source.organizeImports": false,
@@ -25,7 +17,6 @@
     "[jsonc]": {
         "editor.formatOnSave": true
     },
-
     "json.schemas": [
         {
             "fileMatch": [
@@ -34,7 +25,6 @@
             "url": "schemaURL"
         }
     ],
-
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -45,5 +35,13 @@
     },
     "eslint.validate": [
         ""
-    ]
+    ],
+    "files.associations": {
+        "*.js": "javascript",
+        "*.jsx": "javascriptreact"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "javascriptreact": "javascriptreact"
+    }
 }
