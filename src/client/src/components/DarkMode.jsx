@@ -1,8 +1,8 @@
 // library imports
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 // material ui imports
-import { Grid, Switch } from "@mui/material";
+import { Grid, Switch } from '@mui/material';
 
 const DarkMode = ({ onChange }) => {
   const [darkMode, setDarkMode] = useState(false);
@@ -12,7 +12,7 @@ const DarkMode = ({ onChange }) => {
   }, [darkMode, onChange]);
 
   return (
-    <Grid container alignItems="center">
+    <Grid container alignItems='center'>
       <Grid item>Light</Grid>
       <Grid item>
         <Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
