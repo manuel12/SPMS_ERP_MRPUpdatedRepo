@@ -69,7 +69,7 @@ Add additional notes about how to deploy this on a live system.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://www.github.com/gbowne1/SPMS_ERP_MRPUpdatedRepo/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/gbowne1/SPMS_ERP_MRPUpdatedRepo/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -81,7 +81,7 @@ We also use GitHubFlow / GitFlow.
 * **Greg Bowne** - *Initial work* - [gbowne1](https://github.com/gbowne1)
 * **Malcolm C. Dixon - *Inital work* - [malcolmcdixon](https://github.com/malcolmcdixon)
 
-See also the list of [contributors](https://github.com/gbowne1/SPMS_ERP_MRPUpdatedRepo/contributors.md) who participated in this project.
+See also the list of < > who participated in this project.
 
 ## License
 
@@ -91,5 +91,3 @@ This project is licensed under the GNU GPL 3.0 - see the [LICENSE.md](LICENSE.md
 
 * Hat tip to anyone whose code was used
 * Inspiration
-* etc
-
